@@ -1,0 +1,160 @@
+/* =======================
+   PAGE LAYOUT
+======================= */
+body {
+    background: #111;
+    color: #eee;
+    font-family: system-ui, sans-serif;
+    margin: 0;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 50%;
+    min-width: 720px;
+    padding: 20px;
+}
+
+/* =======================
+   TYPOGRAPHY
+======================= */
+h1 {
+    margin-bottom: 5px;
+}
+
+.tiny-text {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* =======================
+   PANELS
+======================= */
+.panel {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+#current {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* =======================
+   LED BUTTONS
+======================= */
+.cmd-btn {
+    padding: 12px 20px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: box-shadow .3s, transform .2s;
+}
+
+.cmd-btn.blue {
+    background: #0077ff;
+}
+
+.cmd-btn.red {
+    background: #cc0000;
+}
+
+.cmd-btn.yellow {
+    background: #ffc800;
+    color: #000;
+}
+
+.cmd-btn.green {
+    background: #109a06;
+}
+
+.cmd-btn.glow {
+    transform: scale(1.05);
+}
+
+.cmd-btn.blue.glow {
+    box-shadow: 5px 5px 10px rgba(200, 200, 256, 0.8);
+}
+
+.cmd-btn.red.glow {
+    box-shadow: 5px 5px 10px rgba(255, 128, 128, .8);
+}
+
+.cmd-btn.yellow.glow {
+    box-shadow: 5px 5px 10px rgba(255, 220, 0, .8);
+}
+
+.cmd-btn.green.glow {
+    box-shadow: 5px 5px 10px rgba(0, 255, 0, .8);
+}
+
+/* =======================
+   CHART
+======================= */
+.chart-wrap {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    font-size: 11px;
+    color: #888;
+    text-align: right;
+    margin-bottom: 9px;
+}
+
+#chart {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 200px;
+    padding: 10px;
+    background: #222;
+    border-radius: 8px;
+}
+
+.bar {
+    width: 16px;
+    border-radius: 4px 4px 0 0;
+    bordeer: 0;
+    background: linear-gradient(to top,
+            #0066ff 30%,
+            #00cc66 50%,
+            #ffeb3b 75%,
+            #ff9800 90%,
+            #f44336 100%);
+    transition: height .4s;
+}
+
+/* Tooltip */
+#tooltip {
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 6px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -10px);
+    transition: opacity .15s;
+}
+
+input#msg {
+    width: 240px;
+}

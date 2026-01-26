@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pico 2W Monitor</title>
+    <link rel="stylesheet" href="./inc/styles.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="content">
+
+            <h1>Pico 2W Monitor</h1>
+            <div id="last-updated" class="tiny-text">Last update —</div>
+
+            <div class="panel">
+                <div>
+                    <div class="tiny-text">Current Temperature</div>
+                    <div id="current">-- °F</div>
+                </div>
+
+                <div>
+                    <h3>LED Control</h3>
+                    <button class="cmd-btn blue" data-cmd="4">P4</button>
+                    <button class="cmd-btn red" data-cmd="3">P3</button>
+                    <button class="cmd-btn yellow" data-cmd="2">P2</button>
+                    <button class="cmd-btn green" data-cmd="1">P1</button>
+                    <div id="cmd-status" class="tiny-text"></div>
+                </div>
+            </div>
+
+            <div class="chart-wrap">
+                <div class="y-axis">
+                    <div>100</div>
+                    <div>90</div>
+                    <div>80</div>
+                    <div>70</div>
+                    <div>60</div>
+                    <div>50</div>
+                    <div>40</div>
+                    <div>30</div>
+                    <div>20</div>
+                    <div>10</div>
+                    <div>0</div>
+                </div>
+                <div id="chart">
+                    <div id="tooltip"></div>
+                </div>
+            </div>
+
+            <div class="form-wrap">
+                <input id="msg" maxlength="32">
+                <button id="sendBtn">Send</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./inc/app.js"></script>
+</body>
+
+</html>
