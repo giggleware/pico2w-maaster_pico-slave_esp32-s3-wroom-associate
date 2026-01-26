@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pico 2W Slave Monitor</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pico 2W Slave Monitor</h1>
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </header>
+
+    <div id="loader">
+        <div></div>
+    </div>
+
+    <main style="opacity:0;">
+        <section class="card">
+            <div class="value-label">Slave Value (raw): <span id="valueDisplay" class="value">0</span></div>
+            <div class="sub">
+                <div>Temp: <span id="tempDisplay">0</span>F</div>
+                <div>LED byte: <code id="ledHex">0x00</code> <code id="ledBin">00000000</code></div>
+                <div id="diag">
+                    <div id="to-slave">TO:&nbsp;</div>
+                    <div id="from-slave">FROM:&nbsp;</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="value-label">LED State</div>
+            <div id="ledIndicators" class="led-row">
+                <div class="led-item">
+                    <div class="led-dot" id="ledRelayDot"></div>
+                    <button id="btnRelay" class="led-btn blue">Relay</button>
+                </div>
+                <div class="led-item">
+                    <div class="led-dot" id="ledRedDot"></div>
+                    <button id="btnRed" class="led-btn red">Red</button>
+                </div>
+                <div class="led-item">
+                    <div class="led-dot" id="ledYellowDot"></div>
+                    <button id="btnYellow" class="led-btn yellow">Yellow</button>
+                </div>
+                <div class="led-item">
+                    <div class="led-dot" id="ledGreenDot"></div>
+                    <button id="btnGreen" class="led-btn green">Green</button>
+                </div>
+            </div>
+            <div class="note">Click a button to toggle an LED or switch on the slave. The page sends the LED byte to
+                <code>/control</code>.
+            </div>
+        </section>
+        <canvas id="graphCanvas"></canvas>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

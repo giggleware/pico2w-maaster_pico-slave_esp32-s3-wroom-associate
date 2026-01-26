@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../esp32_general_purpose"
+		},
+		{
+			"name": "esp32_s3_wroom_uart",
+			"path": ".."
+		}
+	],
+    "settings": {}
+}

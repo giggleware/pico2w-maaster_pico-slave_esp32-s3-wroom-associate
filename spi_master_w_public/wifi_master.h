@@ -1,0 +1,5 @@
+#ifndef WIFI_MASTER_H
+#define WIFI_MASTER_H
+#define WIFI_SSID "MY_WIFI"
+#define WIFI_PASSWORD "MY_WIFI_PASSWORD"
+#endif
